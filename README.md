@@ -3,7 +3,7 @@
 FitLog is a dark, no-nonsense gym companion. Pick a lift, lock it into today's plan, and watch the week's work add up.
 
 ##  Live Demo
-Add your live link here after deploying.
+ Vercel live link : https://fitlog-virid.vercel.app/
 
 ##  Technologies Used
 - Next.js (App Router)
