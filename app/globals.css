@@ -13,3 +13,6 @@ body {
   color: #ffffff;
   font-family: var(--font-inter), sans-serif;
 }
+.font-display {
+  font-family: var(--font-oswald), sans-serif;
+}
