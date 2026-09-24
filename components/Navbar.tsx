@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaDumbbell } from "react-icons/fa";
+import Image from "next/image";
 import { usePlan } from "@/context/PlanContext";
 
 export default function Navbar() {
@@ -18,13 +18,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0a0a0a]/90 backdrop-blur">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#ccff00] text-black">
-            <FaDumbbell />
-          </span>
-          <span className="font-display hidden text-xl font-bold tracking-wider sm:inline">
-            FITLOG
-          </span>
-        </Link>
+        <Image src="/logo.png" alt="FitLog logo" width={36} height={36} priority />
+        <span className="font-display hidden text-xl font-bold tracking-wider sm:inline">
+        FITLOG
+        </span>
+</Link>
 
         <ul className="flex items-center gap-1 sm:gap-2">
           {links.map((link) => (

@@ -23,12 +23,12 @@ export default function Hero() {
 
       <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-white/10">
         <Image
-          src="https://img.magnific.com/free-photo/portrait-anime-character-doing-fitness-exercising_23-2151666664.jpg?w=740"
+          src="/banner.png"
           alt="Workout illustration"
           fill
           priority
           sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover"
+          className="object-contain"
         />
       </div>
     </section>

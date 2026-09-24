@@ -13,6 +13,7 @@ export default function Library() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [sortBy, setSortBy] = useState<SortKey>("duration");
+  const [userSorted, setUserSorted] = useState(false);
 
   useEffect(() => {
     getWorkouts()
@@ -21,7 +22,9 @@ export default function Library() {
       .finally(() => setLoading(false));
   }, []);
 
-  const sorted = [...workouts].sort((a, b) => b[sortBy] - a[sortBy]);
+  const sorted = userSorted
+  ? [...workouts].sort((a, b) => b[sortBy] - a[sortBy])
+  : workouts;
 
   return (
     <section
@@ -45,7 +48,10 @@ export default function Library() {
           <select
             id="sort"
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as SortKey)}
+            onChange={(e) => {
+            setSortBy(e.target.value as SortKey);
+            setUserSorted(true);
+            }}
             className="w-full appearance-none rounded-lg border border-white/20 bg-[#141414] px-4 py-2.5 pr-10 text-sm text-white outline-none focus:border-[#ccff00]"
           >
             <option value="duration">Sort By: Duration</option>
