@@ -1,3 +1,11 @@
+import Hero from "@/components/Hero";
+import Library from "@/components/Library";
+
 export default function Home() {
-  return <h1 className="p-10 text-4xl font-bold">FitLog works</h1>;
+  return (
+    <>
+      <Hero />
+      <Library />
+    </>
+  );
 }
