@@ -24,7 +24,7 @@ Add your live link here after deploying.
 
 ##  Getting Started
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/Habib-Brainbox/fitlog.git
 cd fitlog
 npm install
 npm run dev
